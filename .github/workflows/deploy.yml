@@ -3,7 +3,7 @@ name: Deploy
 on:
   push:
     branches:
-      - main  # Trigger deployment on push to the `main` branch
+      - main
 
 jobs:
   build:
@@ -17,7 +17,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: '16'  # Ensure Node.js version is set correctly
+          node-version: '18'  # Upgrade to Node.js 18 or above
 
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
@@ -29,20 +29,20 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: production-files
-          path: ./dist  # Ensure this is the correct path for your build output
+          path: ./dist
 
   deploy:
     name: Deploy
     needs: build
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'  # Ensure it only runs on `main` branch
+    if: github.ref == 'refs/heads/main'
 
     steps:
       - name: Download artifact
         uses: actions/download-artifact@v3
         with:
           name: production-files
-          path: ./dist  # Download artifact to the correct directory
+          path: ./dist
 
       - name: Setup Git
         run: |
@@ -53,5 +53,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist  # Directory to publish from (your build output directory)
-
+          publish_dir: ./dist
