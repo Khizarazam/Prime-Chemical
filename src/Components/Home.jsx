@@ -37,8 +37,7 @@ const Home = () => {
       desc: "We provide, complete lab facilities, analysis and testing of your electroplating systems and metal finishing procedures.",
     },
   ];
-
-  useEffect(() => {
+  
   useEffect(() => {
     let startY = 0;
 
