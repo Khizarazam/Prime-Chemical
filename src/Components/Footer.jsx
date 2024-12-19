@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import { FaSquareFacebook } from "react-icons/fa6";
 import { FaSquareTwitter } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
+// import "locomotive-scroll/dist/locomotive-scroll.css";
+// import LocomotiveScroll from "locomotive-scroll";
+
 
 const Footer = () => {
   const Tags = [

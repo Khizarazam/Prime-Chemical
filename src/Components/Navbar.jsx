@@ -206,7 +206,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-opacity-15 bg-black">
+    <nav className="bg-opacity-30 bg-white">
       <div className="max-w-7xl mx-auto px-10">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
@@ -235,7 +235,7 @@ const Navbar = () => {
                 )}
 
                 {getDropdownContent(link) && (
-                  <div className="absolute left-0 w-48 bg-[#fffaf5] rounded-md shadow-lg z-50">
+                  <div className="absolute left-0 w-48 bg-zinc-700 rounded-md shadow-lg z-50">
                     {getDropdownContent(link).map((item, idx) => (
                       <div key={idx} className="relative group/submenu">
                         <Link
@@ -244,19 +244,19 @@ const Navbar = () => {
                           rel={
                             item.external ? "noopener noreferrer" : undefined
                           }
-                          className="block px-4 py-2 text-sm hover:bg-gray-100"
+                          className="block px-4 py-2 text-sm hover:bg-zinc-300/10"
                         >
                           {item.name}
                         </Link>
                         {item.hasSubmenu &&
                           electroplatingOptions[item.name] && (
-                            <div className="absolute left-full top-0 w-48 bg-[#fffaf5] rounded-md shadow-lg hidden group-hover/submenu:block max-h-[500px] overflow-y-auto">
+                            <div className="absolute left-full top-0 w-48 bg-zinc-700 rounded-md shadow-lg hidden group-hover/submenu:block max-h-[500px] overflow-y-auto">
                               {electroplatingOptions[item.name].map(
                                 (subItem, subIdx) => (
                                   <Link
                                     key={subIdx}
                                     to={subItem.link}
-                                    className="block px-4 py-2 text-sm hover:bg-gray-100"
+                                    className="block px-4 py-2 text-sm hover:bg-zinc-300/10"
                                   >
                                     {subItem.name}
                                   </Link>
@@ -293,7 +293,7 @@ const Navbar = () => {
 
         {isMobileMenuOpen && (
           <div className="lg:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-[#fffaf5] shadow-lg rounded-b-lg">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-zinc-700 shadow-lg rounded-b-lg">
               {Tags.map((link, index) => (
                 <div key={index} className="relative">
                   {isDropdownHeader(link) ? (
@@ -383,7 +383,7 @@ const Navbar = () => {
           </div>
         )}
       </div>
-      <hr className="w-full border-0 bg-gradient-to-r from-transparent via-black/10 to-transparent h-[2px]" />
+      <hr className="w-full border-0 bg-gradient-to-r from-transparent via-white/10 to-transparent h-[2px]" />
     </nav>
   );
 };
