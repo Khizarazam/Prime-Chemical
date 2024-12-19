@@ -39,8 +39,12 @@ const Home = () => {
   ];
 
   useEffect(() => {
+  useEffect(() => {
+    let startY = 0;
+
     const handleScroll = (e) => {
-      if (e.deltaY > 0) {
+      const deltaY = e.deltaY || 0;
+      if (deltaY > 0) {
         gsap.to("span", {
           x: "-250%",
           repeat: -1,
@@ -50,7 +54,7 @@ const Home = () => {
         gsap.to("#spanimg", {
           rotate: 180,
         });
-      } else {
+      } else if (deltaY < 0) {
         gsap.to("span", {
           x: "0%",
           repeat: -1,
@@ -63,10 +67,25 @@ const Home = () => {
       }
     };
 
+    const handleTouchStart = (e) => {
+      startY = e.touches[0].clientY;
+    };
+
+    const handleTouchMove = (e) => {
+      const currentY = e.touches[0].clientY;
+      const deltaY = startY - currentY;
+      handleScroll({ deltaY });
+      startY = currentY;
+    };
+
     window.addEventListener("wheel", handleScroll);
+    window.addEventListener("touchstart", handleTouchStart);
+    window.addEventListener("touchmove", handleTouchMove);
 
     return () => {
       window.removeEventListener("wheel", handleScroll);
+      window.removeEventListener("touchstart", handleTouchStart);
+      window.removeEventListener("touchmove", handleTouchMove);
     };
   }, []);
 
