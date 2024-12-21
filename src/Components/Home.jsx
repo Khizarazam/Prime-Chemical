@@ -210,7 +210,7 @@ const Home = () => {
           <h1 className="px-2 w-[180px] py-3 text-center my-3 hover:scale-105  transition-all shadow-lg bg-opacity-50 hover:bg-green-500 bg-green-500 rounded-full">
             We Are Certified
           </h1>
-          <div className="w-full h-[500px] relative rounded-xl bg-zinc-300">
+          <div className="w-full h-[500px] relative rounded-xl bg-zinc-700">
             <img
               src={img1}
               alt="Image"
