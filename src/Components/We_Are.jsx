@@ -84,12 +84,7 @@ const We_Are = () => {
         </div>
 
         <div className="flex mt-5 flex-col md:flex-row gap-6">
-          <img
-            src={shazerimg}
-            alt="Shazer Javed Awan"
-            className="w-full md:w-[30%] rounded-lg shadow-xl h-[250px] md:h-[350px] object-cover"
-          />
-          <div className="w-full md:w-[70%] bg-zinc-700 rounded-lg p-4">
+          <div className="w-full md:w-[70%] bg-zinc-700 rounded-lg p-4 order-2 md:order-1">
             <h1 className="text-xl md:text-2xl font-bold text-blue-400">
               Shazer Javed Awan <br /> Director Production
             </h1>
@@ -99,10 +94,27 @@ const We_Are = () => {
               and Technology.
             </p>
           </div>
+          <img
+            src={shazerimg}
+            alt="Shazer Javed Awan"
+            className="w-full order-1 md:order-2 md:w-[30%] rounded-lg shadow-xl h-[250px] md:h-[350px] object-cover"
+          />
         </div>
       </div>
-
       <hr className="w-full border-0 bg-gradient-to-r from-transparent mt-5 md:mt-20 via-white/10 to-transparent h-[2px]" />
+      {/* <div className="w-full h-[600px] my-20">
+        <div className="w-full flex justify-center items-center h-[50px] mt-14 italic pt-10">
+          <div className="w-[300px] duration-500 hover:scale-105 hover:shadow-xl transition-all h-[50px] flex justify-center items-center border-[1px] border-white/50 rounded-full">
+            <h1 className="sm:text-4xl font-bold sm:font-normal text-lg">
+              What We Do
+            </h1>
+          </div>
+        </div>
+        <div className=" w-full my-10 ">
+
+        </div>
+      </div> */}
+      {/* <hr className="w-full border-0 bg-gradient-to-r from-transparent mt-5 md:mt-20 via-white/10 to-transparent h-[2px]" /> */}
     </>
   );
 };

@@ -53,7 +53,7 @@ const App = () => {
     <>
       <div
         id="cursor"
-        className="w-4 h-4 hidden md:block rounded-full bg-white fixed z-[999]"
+        className="w-4 h-4 hidden lg:block rounded-full bg-white fixed z-[999]"
       ></div>
       <div
         data-scroll-section

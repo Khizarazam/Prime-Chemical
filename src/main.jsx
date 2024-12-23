@@ -9,7 +9,6 @@ import Services from './Components/Services.jsx';
 import Glossary from './Components/Glossary.jsx';
 import Contact from './Components/Contact.jsx';
 import ElectroPlating from './Components/ElectroPlating.jsx';
-import GeneralChemicals from './Components/GeneralChemicals.jsx';
 import WeldingElectrodes from './Components/WeldingElectrodes.jsx';
 import Abrasive from './Components/Abrasive.jsx';
 import Disinfectants from './Components/Disinfectants.jsx';
@@ -37,7 +36,6 @@ createRoot(document.getElementById('root')).render(
           <Route path="services" element={<Services />} />
           <Route path="glossary" element={<Glossary />} />
           <Route path="electroplating" element={<ElectroPlating />} />
-          <Route path="general-chemicals" element={<GeneralChemicals />} />
           <Route path="welding-electrodes" element={<WeldingElectrodes />} />
           <Route path="abrasive" element={<Abrasive />} />
           <Route path="disinfectants" element={<Disinfectants />} />

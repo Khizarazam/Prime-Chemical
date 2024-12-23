@@ -44,37 +44,30 @@ const Navbar = () => {
   const productOptions = [
     {
       name: "Electro Plating",
-      link: "/electroplating",
       external: false,
       hasSubmenu: true,
     },
     {
       name: "General Chemicals",
-      link: "/GeneralChemicals",
       external: false,
       hasSubmenu: true,
     },
-    {
-      name: "Welding Electrodes",
-      link: "/WeldingElectrodes",
-      external: false,
-      hasSubmenu: true,
-    },
-    {
-      name: "Abrasive",
-      link: "/Abrasive",
-      external: false,
-    },
-    {
-      name: "Disinfectants",
-      link: "/Disinfectants",
-      external: false,
-    },
-    {
-      name: "PP and PVC items",
-      link: "/PP_Pvc",
-      external: false,
-    },
+    // {
+    //   name: "Welding Electrodes",
+    //   link: "/WeldingElectrodes",
+    //   external: false,
+    //   hasSubmenu: true,
+    // },
+    // {
+    //   name: "Abrasive",
+    //   link: "/Abrasive",
+    //   external: false,
+    // },
+    // // {
+    //   name: "Disinfectants",
+    //   link: "/Disinfectants",
+    //   external: false,
+    // },
   ];
 
   const electroplatingOptions = {
@@ -151,8 +144,9 @@ const Navbar = () => {
   };
 
   const equipmentOptions = [
-    { name: "Electroplating Plants", link: "/ElectroplatingPlants" },
-    { name: "ElectroPLating Equipments", link: "/ElectroPLatingEquipments" },
+    { name: "Electroplating Plants", link: "/electroplating-plants" },
+    { name: "ElectroPLating Equipments", link: "/electroplating-equipments" },
+    { name: "PP and PVC items" , link: "/pp-pvc"}
   ];
 
   const handleMouseEnter = (menu) => {

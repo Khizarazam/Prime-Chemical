@@ -90,9 +90,9 @@ const Home = () => {
 
   return (
     <>
-      <div className="w-full min-h-screen mt-32 md:mt-0 flex flex-col md:flex-row justify-end md:justify-center items-center">
+      <div className="w-full min-h-screen mt-20 flex flex-col md:flex-row justify-end md:justify-center items-center">
         <div className="w-full flex flex-col justify-center items-center min-h-[40vh] md:min-h-[70vh]">
-          <div className="w-[60%] pt-31 md:pt-0 text-center">
+          <div className="w-[60%] text-center">
             <h1 className="text-3xl md:mt-0 sm:text-4xl md:text-5xl font-medium">
               Prime Chemical
             </h1>
@@ -100,7 +100,7 @@ const Home = () => {
               A Sign Of Quality
             </h3>
           </div>
-          <div className="w-full px-3 max-w-3xl text-center">
+          <div className="w-full px-3 max-w-3xl  text-center">
             <p className=" sm:text-lg md:text-xl">
               <i>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -116,8 +116,8 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="w-full md:w-[50%] min-h-[50vh] md:min-h-screen">
-          <div className="flex items-center justify-center w-full h-full mt-20 md:mt-20 lg:mt-10 p-4 md:p-0">
+        <div className="w-full md:w-[50%] pt-10 md:pt-0 min-h-[50vh] md:min-h-screen">
+          <div className="flex items-center justify-center w-full h-full p-4 md:p-0">
             <img
               src={image_1}
               alt="Image"
